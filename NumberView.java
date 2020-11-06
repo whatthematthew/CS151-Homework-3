@@ -10,34 +10,32 @@ public class NumberView extends JFrame {
         this.model = model;
 
         add(new JLabel("Red"));
-        JTextField redNumber = new JTextField(6);
+        JTextField redNumber = new JTextField(5);
         redNumber.setText(n1 + "");
         add(redNumber);
         
         add(new JLabel("Green"));
-        JTextField greenNumber = new JTextField(6);
+        JTextField greenNumber = new JTextField(5);
         greenNumber.setText(n1 + "");
         add(greenNumber);
         
         add(new JLabel("Blue"));
-        JTextField blueNumber = new JTextField(6);
+        JTextField blueNumber = new JTextField(5);
         blueNumber.setText(n1 + "");
         add(blueNumber);
 
         JButton submit = new JButton("Submit");
         add(submit);
         setVisible(true);
-        setSize(500, 500);
+        setSize(1000, 500);
         setLayout(new FlowLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        submit.addActionListener(event -> {
-            int number1 = Integer.parseInt(redNumber.getText());
-            int number2 = Integer.parseInt(greenNumber.getText());
-            int number3 = Integer.parseInt(blueNumber.getText());
-            model.updateValues(number1, number2, number3);
-        });
-
+      int number1 = Integer.parseInt(redNumber.getText());
+      int number2 = Integer.parseInt(greenNumber.getText());
+      int number3 = Integer.parseInt(blueNumber.getText());
+       submit.addActionListener(event ->model.updateValues(number1, number2, number3));
 
     }
+    
 }

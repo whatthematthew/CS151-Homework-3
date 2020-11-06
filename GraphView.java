@@ -12,7 +12,7 @@ public class GraphView extends JFrame {
     	this.n1=n1;
     	this.n2=n2;
     	this.n3=n3;
-        setSize(500, 500);
+        setSize(1000, 500);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
